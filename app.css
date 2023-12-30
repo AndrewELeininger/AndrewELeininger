@@ -27,6 +27,18 @@
     transform: translateZ(0px);
 }*/
 /*GENERAL*/
+:root {
+    --f1: clamp(4rem, 8vw + 1rem, 8rem);
+    --f2: 4rem;
+    --f3: 2rem;
+
+    --bg: rgb(255, 242, 242);
+    --fg: rgb(20, 19, 19);    
+}
+
+@media screen and (max-width: 1300px) {   
+}
+
 ::-webkit-scrollbar {
     width: 15px;  
     height: 20px;
@@ -41,13 +53,6 @@
     background: var(--bg);
 }
 body{
-    --f1: 4rem;
-    --f2: 2rem;
-    --f3: 1rem;
-
-    --bg: rgb(255, 242, 242);
-    --fg: rgb(20, 19, 19);
-
     background-color: var(--bg);
     margin: 0;
 }
@@ -77,8 +82,7 @@ p {
     background-color: var(--fg);
 }
 .logo{
-    width: 60rem;
-    padding: 25px 0;
+    width: clamp(45rem, 60vw + 1rem, 65rem);
 }
 .homearea{
     position: relative;
@@ -89,15 +93,21 @@ p {
     gap: 50px;
 }
 .homesets{
+    position: relative;
+    height: 25rem;
     opacity: 80%;
-    transition: opacity ease-in-out 0.2s;    
+    transition: opacity ease-in-out 0.2s;   
 }
 .homesets:hover{
     opacity: 100%;
 }
 .homesets img{
+    position: absolute;
     width: 20rem;
     height: 20rem;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 50%;
     border: solid rgba(255, 255, 255, 0.5) 1px;
     box-shadow: black 0 0 5px;  
@@ -162,6 +172,11 @@ h2 {
     grid-auto-rows: 19rem;
     margin: 33px 0;
 }
+@media screen and (max-width: 1000px) {   
+    .photoarea {
+    grid-template-columns: 1fr;
+    }
+}
 .photosets {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
@@ -178,7 +193,7 @@ h2 {
     color: var(--bg);
     writing-mode: vertical-lr;
     text-transform: uppercase;
-    font-size: var(--f1);
+    font-size: var(--f2);
     opacity: 50%;
 }
 .gallery {
@@ -274,20 +289,6 @@ h2 {
 .image-12{
     background-image: url("gal12.JPG");    
 }
-
 @media screen and (max-width: 1300px) {   
-    .logo{
-        width: 45rem;
-    }
-    /*PHOTOGRAPHY*/
-}
-@media screen and (max-width: 800px) { 
-    .logo{
-        width: 30rem;
-    }
-/*PHOTOGRAPHY*/
-    .photoarea {
-    grid-template-columns: 1fr;
-    }   
-}
 
+}
