@@ -36,7 +36,9 @@
     --fg: rgb(20, 19, 19);    
 }
 
-@media screen and (max-width: 1300px) {   
+@media screen and (max-width: 1000px) {  
+    :root { 
+    }    
 }
 
 ::-webkit-scrollbar {
@@ -134,8 +136,8 @@ p {
 /*CONTACT*/
 .links {
     display: flex;
-    padding: 0 15px;
-    gap: 15px;
+    padding: 0 1rem;
+    gap: 1rem;
     background-color: var(--fg);
     justify-items: center;
     align-items: center;
@@ -152,6 +154,7 @@ p {
 .email {
     color: white;
     font-size: var(--f3);
+    margin: 1rem 0;
 }
 
 /*PHOTOGRAPHY*/
@@ -254,40 +257,28 @@ h2 {
     right: 0;
 }
 .image-1{
-    background-image: url("gal1.JPG");    
+    background-image: url("gal\ \(1\).jpg");    
 }
 .image-2{
-    background-image: url("gal2.JPG");    
+    background-image: url("gal\ \(2\).jpg");    
 }
 .image-3{
-    background-image: url("gal3.JPG");    
+    background-image: url("gal\ \(3\).jpg");    
 }
 .image-4{
-    background-image: url("gal4.JPG");    
+    background-image: url("gal\ \(4\).jpg");    
 }
 .image-5{
-    background-image: url("gal5.JPG");    
+    background-image: url("gal\ \(5\).jpg");    
 }
 .image-6{
-    background-image: url("gal6.JPG");    
+    background-image: url("gal\ \(6\).jpg");    
 }
 .image-7{
-    background-image: url("gal7.JPG");    
+    background-image: url("gal\ \(7\).jpg");    
 }
 .image-8{
-    background-image: url("gal8.JPG");    
-}
-.image-9{
-    background-image: url("gal9.JPG");    
-}
-.image-10{
-    background-image: url("gal10.JPG");    
-}
-.image-11{
-    background-image: url("gal11.JPG");    
-}
-.image-12{
-    background-image: url("gal12.JPG");    
+    background-image: url("gal\ \(8\).jpg");    
 }
 @media screen and (max-width: 1300px) {   
 
