@@ -28,15 +28,21 @@
 }*/
 /*GENERAL*/
 :root {
-    --f1: clamp(6rem, 8vw + 1rem, 9rem);
+    --f1: clamp(4rem, 8vw + 1rem, 8rem);
     --f2: 3rem;
     --f3: 1rem;
+
+    --f2: 4rem;
+    --f3: 1.75rem;
 
     --bg: rgb(255, 242, 242);
     --fg: rgb(20, 19, 19);    
 }
 @media (pointer:coarse) {
-
+    :root {
+    --f2: 4rem;
+    --f3: 1.75rem;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -81,32 +87,33 @@ p {
     background-color: var(--fg);
 }
 .homearea{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: var(--f2) 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5rem 0;
+    background-color: var(--bg);    
 }
-.homesets{
-    width: 300px;
-    height: 300px;
-    margin-bottom: var(--f2);
+.homesets{ 
+    margin: 0;
+    width: 100%;  
 }
 
 .homesets img{
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
     border: solid rgba(255, 255, 255, 0.5) 1px;
-    box-shadow: black 0 0 5px;      
-    opacity: 80%;
-    transition: opacity ease-in-out 0.2s;     
+    box-shadow: black 0 0 5px;   
+    scale: 95%;
+    transition: scale ease-in-out 0.25s;     
 }
 .homesets img:hover{
-    opacity: 100%;
+    scale: 100%;
 }
 .homesets figcaption{
-    color: black;    
+    color: black; 
     text-align: center;
-
     text-transform: uppercase;
     font-size: var(--f2);   
 }
@@ -130,7 +137,7 @@ h2 {
     text-align: center;
     text-transform: uppercase;
     margin: 0;
-    padding: 75px 25px 25px 25px;
+    padding: var(--f1) 1rem 1rem 1rem;
     background-color: var(--fg);
 }
 .photoarea {
@@ -141,7 +148,6 @@ h2 {
     grid-auto-rows: 19rem;
     margin: 33px 0;
 }
-
 .photosets {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
@@ -268,7 +274,10 @@ h2 {
 }
 @media screen and (max-width: 1000px) {   
     .photoarea {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .homearea {
+        grid-template-columns: 1fr;
     }
 }
 @media (pointer:coarse) {
