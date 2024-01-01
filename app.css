@@ -65,6 +65,7 @@ body{
     width: 100%;
     padding: 1rem;
     border: solid 0.5rem var(--fg);
+    color: black;
     text-transform: uppercase;
     font-size: var(--f3);
     background-color: rgb(150, 139, 139);
