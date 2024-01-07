@@ -86,8 +86,8 @@ p {
     border-image-source: url("border.png");
     border-image-outset: 35px;
     border-image-slice: 35;
-    border-image-repeat: round;
-    margin: 43px;    
+    border-image-repeat: round;  
+    margin: 85px;   
 }
 /*HOME*/
 .logo{
@@ -96,20 +96,20 @@ p {
     background-color: var(--fg);
 }
 .homearea{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 4px 8px 8px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: var(--bg);    
     border: 60px solid;
     border-image-source: url("border2.png");
     border-image-slice: 60;
-    border-image-repeat: round;       
+    border-image-repeat: round;  
+    margin: 50px;     
 }
 .homesets{ 
-    margin: 0;
-    width: 100%;  
+    margin: 0; 
+    flex-grow: 1;    
 }
-
 .homesets img{
     display: block;
     margin: 0 auto;
@@ -118,10 +118,12 @@ p {
     border-radius: 50%;
     border: solid rgba(255, 255, 255, 0.5) 1px;
     box-shadow: black 0 0 5px;
-    scale: 95%;
-    transition: scale ease-in-out 0.25s;     
+    scale: 98%;
+    mix-blend-mode: luminosity;
+    transition: scale ease-in-out 0.25s;    
 }
 .homesets img:hover{
+    mix-blend-mode: normal;
     scale: 100%;
 }
 .homesets figcaption{
@@ -159,7 +161,8 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 19rem;
     grid-auto-rows: 19rem;
-    margin: 33px 0;
+    margin: 30px 0;
+
 }
 .photosets {
     position: relative;
@@ -184,9 +187,13 @@ h2 {
     position: relative;
     overflow: hidden;
     background-color: var(--fg);
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
-    border-top: solid 1px rgba(255, 255, 255, 0.5);
-    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+    border: 60px solid;
+    border-image-source: url("border.png");
+    border-image-slice: 60;
+    border-image-repeat: round; 
+    border-image-outset: 30px;
+    margin: 60px;
+
 }
 .gallery-container {
     display: grid;
@@ -214,7 +221,6 @@ h2 {
     top: 0;
     align-items: center;
     justify-content: center;
-    background: linear-gradient( to left, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
     border: none;
     width: 75px;
     height: 100%;
