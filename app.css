@@ -55,6 +55,7 @@
     border: solid 3px var(--fg);
     background: var(--bg);
 }
+
 body{
     background-color: var(--bg);
     margin: 0;
@@ -62,18 +63,20 @@ body{
 .backbtn {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     padding: 1rem;
-    border: solid 0.5rem var(--fg);
-    color: black;
+    border: solid 0.25rem var(--bg);
+    color: var(--bg);
     text-transform: uppercase;
     font-size: var(--f3);
-    background-color: rgb(150, 139, 139);
+    background-color: var(--fg);
     transition: background-color ease 0.25s;
     z-index: 2;
 }
 .backbtn:hover {
     background-color: var(--bg);
+    color: black;
 }
 p {
     font-size: var(--f3);
@@ -88,6 +91,15 @@ p {
     border-image-slice: 35;
     border-image-repeat: round;  
     margin: 85px;   
+}
+.divide {
+    height: clamp(2rem, 3vw + 1rem, 4rem);  
+    width: 100%;
+    background-image: url("divide.svg");
+    background-position: center;     
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 /*HOME*/
 .logo{
@@ -217,31 +229,32 @@ h2 {
 .pre-btn,
 .nxt-btn {
     position: absolute;
-    display: flex;    
+    display: flex;   
+    background: linear-gradient( to left, white, rgba(0, 0, 0, 0)); 
     top: 0;
+    bottom: 20px;
     align-items: center;
     justify-content: center;
     border: none;
-    width: 75px;
-    height: 100%;
-    opacity: 25%;
+    width: 100px;
+    opacity: 5%;
     transition: opacity ease 0.25s;
     z-index: 1;
 }
 .pre-btn:hover,
 .nxt-btn:hover{
-    opacity: 50%;
+    opacity: 25%;
 }
 .pre-btn {
     transform: rotate(180deg);
     left: 0;
 }
-.pre-btn:active,
-.nxt-btn:active{
-    scale: 105%;
-}
 .nxt-btn {
     right: 0;
+}
+.pre-btn:active,
+.nxt-btn:active{
+    width: 98px;
 }
 .image-1{
     background-image: url("gal\ \(1\).jpg");    
