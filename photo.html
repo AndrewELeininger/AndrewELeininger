@@ -9,34 +9,32 @@
 <body>
     <h2>photo gallery</h2> 
     <button class="backbtn" onclick="back()">back</button>
+    <div class="divide"></div>
+    <div class="photoarea">
+        <figure onclick="naturebtn()" class="photosets">
+            <figcaption>nature</figcaption>
+            <img src="nature.JPG">
+        </figure>
+        <figure onclick="streetbtn()" class="photosets">
+            <figcaption>street</figcaption>
+            <img src="street.JPG">
+        </figure>
+        <figure onclick="otherbtn()" class="photosets">
+            <figcaption>other</figcaption>
+            <img src="other.JPG">
+    </div>  
     <div class="gallery">
         <button class="pre-btn" alt="previous"><img src="arrow.svg" width="100px"/></button>
         <button class="nxt-btn" alt="next"><img src="arrow.svg" width="100px"/></button>
         <div class="gallery-container">
-            <div class="gallery-image image-1"></div>
-            <div class="gallery-image image-2"></div>
-            <div class="gallery-image image-3"></div>
-            <div class="gallery-image image-4"></div>
-            <div class="gallery-image image-5"></div>
-            <div class="gallery-image image-6"></div>
-            <div class="gallery-image image-7"></div>
-            <div class="gallery-image image-8"></div>
+            <div class="gallery-image image-1 gal1"></div>
+            <div class="gallery-image image-2 gal1"></div>          
+            <div class="gallery-image image-3 gal2"></div>
+            <div class="gallery-image image-4 gal2"></div>        
+            <div class="gallery-image image-5 gal3"></div>
+            <div class="gallery-image image-6 gal3"></div>           
         </div>
     </div>
-    <div class="divide"></div>
-    <div class="photoarea">
-        <figure class="photosets">
-            <figcaption>nature</figcaption>
-            <img src="nature.JPG">
-        </figure>
-        <figure class="photosets">
-            <figcaption>street</figcaption>
-            <img src="street.JPG">
-        </figure>
-        <figure class="photosets">
-            <figcaption>other</figcaption>
-            <img src="other.JPG">
-    </div>     
     <section class="section2">
         <div class="links">
             <p class="email">leininger5andrewelliot@gmail.com</p>             

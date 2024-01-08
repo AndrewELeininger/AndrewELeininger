@@ -14,9 +14,53 @@ function back() {
     window.location.href="index.html";
 }
 /*PHOTOGRAPHY*/
+
 const galleryContainers = [...document.querySelectorAll('.gallery-container')];
 const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
 const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+function scrolldown() {
+    window.scrollTo(0, document.body.scrollHeight);    
+}
+
+function naturebtn() {
+    scrolldown(); 
+document.querySelectorAll(".gal1").forEach(function(gal1) {
+    gal1.style.display = "block";
+  });
+  document.querySelectorAll(".gal2").forEach(function(gal2) {
+    gal2.style.display = "none";
+  }); 
+  document.querySelectorAll(".gal3").forEach(function(gal3) {
+    gal3.style.display = "none";
+  });       
+}
+
+function streetbtn() {
+    scrolldown();
+    document.querySelectorAll(".gal1").forEach(function(gal1) {
+        gal1.style.display = "none";
+      });
+      document.querySelectorAll(".gal2").forEach(function(gal2) {
+        gal2.style.display = "block";
+      }); 
+      document.querySelectorAll(".gal3").forEach(function(gal3) {
+        gal3.style.display = "none";
+      });  
+}
+
+function otherbtn() {
+    scrolldown();
+    document.querySelectorAll(".gal1").forEach(function(gal1) {
+        gal1.style.display = "none";
+      });
+      document.querySelectorAll(".gal2").forEach(function(gal2) {
+        gal2.style.display = "none";
+      }); 
+      document.querySelectorAll(".gal3").forEach(function(gal3) {
+        gal3.style.display = "block";
+      });   
+}
 
 galleryContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();

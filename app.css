@@ -27,6 +27,9 @@
     transform: translateZ(0px);
 }*/
 /*GENERAL*/
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --f1: clamp(4rem, 8vw + 1rem, 8rem);
     --f2: 3rem;
@@ -92,20 +95,13 @@ p {
     border-image-repeat: round;  
     margin: 85px;   
 }
-.divide {
-    height: clamp(2rem, 3vw + 1rem, 4rem);  
-    width: 100%;
-    background-image: url("divide.svg");
-    background-position: center;     
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
 /*HOME*/
 .logo{
-    height: clamp(25rem, 45vw + 1rem, 45rem);
+    height: clamp(25rem, 40vw + 1rem, 40rem);
     width: 100%;
     background-color: var(--fg);
+    background-position: center;
+    background-size: 50%;    
 }
 .homearea{
     display: flex;
@@ -131,7 +127,7 @@ p {
     border: solid rgba(255, 255, 255, 0.5) 1px;
     box-shadow: black 0 0 5px;
     scale: 98%;
-    mix-blend-mode: luminosity;
+    mix-blend-mode:luminosity;
     transition: scale ease-in-out 0.25s;    
 }
 .homesets img:hover{
@@ -167,6 +163,15 @@ h2 {
     padding: var(--f1) 1rem 1rem 1rem;
     background-color: var(--fg);
 }
+.divide {
+    height: clamp(2rem, 3vw + 1rem, 4rem);  
+    width: 100%;
+    background-image: url("divide.svg");
+    background-position: center;     
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 3rem 0 0 0;
+}
 .photoarea {
     display: grid;
     background-color: var(--bg);
@@ -179,6 +184,12 @@ h2 {
 .photosets {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+    mix-blend-mode: luminosity;
+    transition: box-shadow ease 0.2s;
+}
+.photosets:hover {
+    mix-blend-mode: normal;
+    box-shadow: black 0 0 15px;
 }
 .photosets img {
     object-fit: cover;
@@ -203,8 +214,8 @@ h2 {
     border-image-source: url("border.png");
     border-image-slice: 60;
     border-image-repeat: round; 
-    border-image-outset: 30px;
-    margin: 60px;
+    border-image-outset: 18px;
+    margin: 30px;
 
 }
 .gallery-container {
@@ -226,6 +237,7 @@ h2 {
     background-position: center;
     background-size: cover;
 }
+
 .pre-btn,
 .nxt-btn {
     position: absolute;
@@ -274,13 +286,6 @@ h2 {
 .image-6{
     background-image: url("gal\ \(6\).jpg");    
 }
-.image-7{
-    background-image: url("gal\ \(7\).jpg");    
-}
-.image-8{
-    background-image: url("gal\ \(8\).jpg");    
-}
-
 /*CONTACT*/
 .links {
     display: flex;
