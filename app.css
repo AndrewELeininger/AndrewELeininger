@@ -242,11 +242,12 @@ h2 {
 .nxt-btn {
     position: absolute;
     display: flex;   
-    background: linear-gradient( to left, white, rgba(0, 0, 0, 0)); 
+    background: linear-gradient( to left, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0)); 
     top: 0;
     bottom: 20px;
     align-items: center;
     justify-content: center;
+    border-radius: 1.5rem;
     border: none;
     width: 100px;
     opacity: 5%;
@@ -316,7 +317,10 @@ h2 {
     .homearea {
         grid-template-columns: 1fr;
     }
-}
+    .pre-btn,
+    .nxt-btn {
+        border-radius: 0;
+    }
 @media (pointer:coarse) {
 
 }
