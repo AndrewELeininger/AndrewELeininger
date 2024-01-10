@@ -270,23 +270,41 @@ h2 {
     width: 98px;
 }
 .image-1{
-    background-image: url("gal\ \(1\).jpg");    
+    background-image: url("nat1.jpg");    
 }
 .image-2{
-    background-image: url("gal\ \(2\).jpg");    
+    background-image: url("nat2.jpg");    
 }
 .image-3{
-    background-image: url("gal\ \(3\).jpg");    
+    background-image: url("nat3.jpg");    
 }
+.image-4,
+.image-5,
+.image-6,
+.image-7,
+.image-8,
+.image-9 {
+    background-image: url("border.png")
+}
+/*
 .image-4{
-    background-image: url("gal\ \(4\).jpg");    
+    background-image: url("");    
 }
 .image-5{
-    background-image: url("gal\ \(5\).jpg");    
+    background-image: url("");    
 }
 .image-6{
-    background-image: url("gal\ \(6\).jpg");    
+    background-image: url("");    
 }
+.image-7{
+    background-image: url("");    
+}
+.image-8{
+    background-image: url("");    
+}
+.image-9{
+    background-image: url("");    
+}*/
 /*CONTACT*/
 .links {
     display: flex;
@@ -321,6 +339,4 @@ h2 {
     .nxt-btn {
         border-radius: 0;
     }
-@media (pointer:coarse) {
-
 }
