@@ -108,10 +108,10 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     background-color: var(--bg);    
-    border: 60px solid;
-    border-image-source: url("border2.png");
-    border-image-slice: 60;
-    border-image-repeat: round;  
+        border: 60px solid;
+        border-image-source: url("border2.png");
+        border-image-slice: 60;
+        border-image-repeat: round;  
     margin: 50px;     
 }
 .homesets{ 
@@ -211,10 +211,10 @@ h2 {
     overflow: hidden;
     background-color: var(--fg);
     border: 60px solid;
-    border-image-source: url("border.png");
-    border-image-slice: 60;
-    border-image-repeat: round; 
-    border-image-outset: 18px;
+        border-image-source: url("border.png");
+        border-image-slice: 60;
+        border-image-repeat: round; 
+        border-image-outset: 18px;
     margin: 30px;
 
 }
@@ -223,7 +223,7 @@ h2 {
     grid-auto-flow: column;
     grid-auto-columns: 100%; 
     aspect-ratio: 1/1;
-    max-width: 300px;  
+    max-width: 750px;  
     margin: auto;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -231,13 +231,14 @@ h2 {
     overscroll-behavior-inline: contain;
 }
 .gallery-image {    
-    scroll-snap-align: center;   
-    width: 100%;
-    height: 100%;
+    scroll-snap-align: center;  
+    width: 300px;
+    height: 300px; 
+    /*width: 100%;
+    height: 100%;*/
     background-position: center;
     background-size: cover;
 }
-
 .pre-btn,
 .nxt-btn {
     position: absolute;
