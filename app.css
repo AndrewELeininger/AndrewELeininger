@@ -231,10 +231,7 @@ h2 {
     overscroll-behavior-inline: contain;
 }
 .gallery-image {    
-    left: 0;
-    bottom: 0;
-    right: 0;
-    top: 0;
+    scale: 90%;
     scroll-snap-align: center;  
     background-position: center;
     background-size: cover;
