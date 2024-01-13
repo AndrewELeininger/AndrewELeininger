@@ -230,8 +230,9 @@ h2 {
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
 }
-.gallery-image {    
-    scale: 90%;
+.gallery-image {  
+    width: 100%; 
+    height: 100%; 
     scroll-snap-align: center;  
     background-position: center;
     background-size: cover;
