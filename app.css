@@ -230,9 +230,8 @@ h2 {
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
 }
-.gallery-image {  
-    width: 100%; 
-    height: 100%; 
+.gallery-image {
+    width: 100%;
     scroll-snap-align: center;  
     background-position: center;
     background-size: cover;
@@ -268,7 +267,7 @@ h2 {
 .nxt-btn:active{
     width: 98px;
 }
-.image-1{
+/*.image-1{
     background-image: url("nat1.jpg");    
 }
 .image-2{
@@ -284,7 +283,8 @@ h2 {
 .image-8,
 .image-9 {
     background-image: url("border.png");
-}
+}*/
+
 /*
 .image-4{
     background-image: url("");    
