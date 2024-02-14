@@ -176,8 +176,8 @@ h2 {
     display: grid;
     background-color: var(--bg);
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 19rem;
-    grid-auto-rows: 19rem;
+    grid-template-rows: 20rem;
+    grid-auto-rows: 20rem;
     margin: 30px 0;
 
 }
