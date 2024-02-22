@@ -31,17 +31,18 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --f1: clamp(4rem, 6vw + 1rem, 6rem);
-    --f2: 3rem;
-    --f3: 1rem;
+    --f1: clamp(3rem, 4vw + 1rem, 4rem);
+    --f2: 1rem;
 
     --bg: rgb(255, 242, 242);
     --fg: rgb(20, 19, 19);
 }
 @media (pointer:coarse) {
     :root {
-    --f2: 4rem;
-    --f3: 1.75rem;
+    --f2: 1.75rem
+    }
+    .photosets{
+        mix-blend-mode: normal;
     }
 }
 
@@ -72,7 +73,7 @@ body{
     border: solid 0.25rem var(--bg);
     color: var(--bg);
     text-transform: uppercase;
-    font-size: var(--f3);
+    font-size: var(--f2);
     background-color: var(--fg);
     transition: all ease 0.25s;
     z-index: 2;
@@ -81,11 +82,20 @@ body{
     background-color: var(--bg);
     color: black;
 }
+h2 {
+    color: var(--bg);
+    font-size: var(--f1);    
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: var(--f1) 1rem 1rem 1rem;
+    background-color: var(--fg);
+}
 p {
-    font-size: var(--f3);
+    font-size: var(--f2);
 }
 .fancy-p {
-    font-size: var(--f3);
+    font-size: var(--f2);
     color: var(--bg);
     background-color: var(--fg);
     border: 30px solid;
@@ -100,7 +110,7 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 15rem;
-    background-color: var(--bg);
+    background-color: var(--fg);
 }
 .logo{
     background-color: var(--fg);
@@ -114,7 +124,7 @@ p {
     font-family:serif;
     font-weight: bolder;
     text-transform: uppercase;
-    font-size: var(--f3);
+    font-size: var(--f2);
     color: var(--bg);
     background-color: var(--fg);
         border: 30px solid;
@@ -125,7 +135,7 @@ p {
     margin: 25px;
 }
 .menubtn:hover{
-
+    
 }
 .homearea{
     position: relative;
@@ -138,15 +148,6 @@ p {
     margin: 15px;     
 }
 /*PHOTOGRAPHY*/
-h2 {
-    color: var(--bg);
-    font-size: var(--f1);    
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0;
-    padding: var(--f1) 1rem 1rem 1rem;
-    background-color: var(--fg);
-}
 .divide {
     height: clamp(2rem, 3vw + 1rem, 4rem);  
     width: 100%;
@@ -169,7 +170,7 @@ h2 {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
     mix-blend-mode: luminosity;
-    transition: box-shadow ease 0.2s;
+    transition: all ease 0.2s;
 }
 .photosets:hover {
     mix-blend-mode: normal;
@@ -187,7 +188,7 @@ h2 {
     color: var(--bg);
     writing-mode: vertical-lr;
     text-transform: uppercase;
-    font-size: var(--f2);
+    font-size: 3.5rem;
     opacity: 50%;
 }
 .gallery {
@@ -300,7 +301,7 @@ h2 {
 }
 .links a {
     color: grey;
-    font-size: var(--f3);
+    font-size: var(--f2);
     text-decoration-line: none;   
     transition: color ease .25s; 
 }
@@ -309,14 +310,18 @@ h2 {
 }
 .email {
     color: white;
-    font-size: var(--f3);
+    font-size: var(--f2);
     margin: 1rem 0;
 }
 @media screen and (max-width: 1000px) {   
-    .photoarea {
-        grid-template-columns: 1fr;
+    .homemenu{
+        background-color: var(--bg);
+        grid-template-columns: repeat(3, 1fr);
     }
-    .homearea {
+    h2{
+        margin: 25px 0;
+    }
+    .photoarea {
         grid-template-columns: 1fr;
     }
     .pre-btn,
