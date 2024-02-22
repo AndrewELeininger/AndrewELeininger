@@ -31,7 +31,7 @@ html {
     scroll-behavior: smooth;
 }
 :root {
-    --f1: clamp(4rem, 8vw + 1rem, 8rem);
+    --f1: clamp(4rem, 6vw + 1rem, 6rem);
     --f2: 3rem;
     --f3: 1rem;
 
