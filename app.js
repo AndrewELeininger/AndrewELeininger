@@ -22,9 +22,11 @@ const preBtn = [...document.querySelectorAll('.pre-btn')];
 function scrolldown() {
     window.scrollTo(0, document.body.scrollHeight);    
 }
+function scrollup() {
+  window.scrollTo(top);
+}
 
-function naturebtn() {
-    scrolldown(); 
+function naturebtn() { 
 document.querySelectorAll(".gal1").forEach(function(gal1) {
     gal1.style.display = "block";
   });
@@ -37,7 +39,6 @@ document.querySelectorAll(".gal1").forEach(function(gal1) {
 }
 
 function streetbtn() {
-    scrolldown();
     document.querySelectorAll(".gal1").forEach(function(gal1) {
         gal1.style.display = "none";
       });
@@ -50,7 +51,6 @@ function streetbtn() {
 }
 
 function otherbtn() {
-    scrolldown();
     document.querySelectorAll(".gal1").forEach(function(gal1) {
         gal1.style.display = "none";
       });

@@ -39,7 +39,7 @@ html {
 }
 @media (pointer:coarse) {
     :root {
-    --f2: 1.75rem
+    --f2: 2.75rem
     }
     .photosets{
         mix-blend-mode: normal;
@@ -59,7 +59,6 @@ html {
     border: solid 3px var(--fg);
     background: var(--bg);
 }
-
 body{
     background-color: var(--bg);
     margin: 0;
@@ -70,7 +69,7 @@ body{
     left: 0;
     right: 0;
     padding: 1rem;
-    border: solid 0.25rem var(--bg);
+    border: solid 0.1rem var(--bg);
     color: var(--bg);
     text-transform: uppercase;
     font-size: var(--f2);
@@ -109,7 +108,7 @@ p {
 .homemenu{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 15rem;
+    grid-template-rows: 25rem;
     background-color: var(--fg);
 }
 .logo{
@@ -118,24 +117,28 @@ p {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    margin-bottom: 0px;
     grid-area: 1/1/2/4;
 }
 .menubtn{
     font-family:serif;
-    font-weight: bolder;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: var(--f2);
     color: var(--bg);
     background-color: var(--fg);
+    opacity: 100%;
         border: 30px solid;
         border-image-source: url("border.png");
         border-image-outset: 10px;
         border-image-slice: 60;
         border-image-repeat: round; 
-    margin: 15px 25px;
+    margin: 25px;
+    transition: all 0.25s ease;
 }
 .menubtn:hover{
-    
+    opacity: 90%;
+    border-image-slice: 70;
 }
 .homearea{
     position: relative;
@@ -193,103 +196,40 @@ p {
 }
 .gallery {
     position: relative;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5rem;
     background-color: var(--fg);
-    border: 60px solid;
+    border: 30px solid;
         border-image-source: url("border.png");
         border-image-slice: 60;
         border-image-repeat: round; 
-        border-image-outset: 18px;
+        border-image-outset: 10px;
     margin: 30px;
+    padding: 0;
 
-}
-.gallery-container {
-    position: relative;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%; 
-    max-width: 750px;  
-    margin: auto;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    overscroll-behavior-inline: contain;
 }
 .gallery-image {
     width: 100%;
     height: 100%;
+    border: none;
+    border-radius: 3px;
     scroll-snap-align: center;  
     background-position: center;
     background-size: cover;
 }
-.pre-btn,
-.nxt-btn {
-    position: absolute;
-    display: flex;   
-    background: linear-gradient( to left, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0)); 
-    top: 0;
-    bottom: 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1.5rem;
-    border: none;
-    width: 100px;
-    opacity: 5%;
-    transition: opacity ease 0.25s;
-    z-index: 1;
+.gal1{
+    display: block;
 }
-.pre-btn:hover,
-.nxt-btn:hover{
-    opacity: 25%;
+.gal2{
+    display: block;
 }
-.pre-btn {
-    transform: rotate(180deg);
-    left: 0;
+.gal3{
+    display: block;
 }
-.nxt-btn {
-    right: 0;
-}
-.pre-btn:active,
-.nxt-btn:active{
-    width: 98px;
-}
-/*.image-1{
-    background-image: url("nat1.jpg");    
-}
-.image-2{
-    background-image: url("nat2.jpg");    
-}
-.image-3{
-    background-image: url("nat3.jpg");    
-}
-.image-4,
-.image-5,
-.image-6,
-.image-7,
-.image-8,
-.image-9 {
-    background-image: url("border.png");
-}*/
+/*HOME*/
 
-/*
-.image-4{
-    background-image: url("");    
-}
-.image-5{
-    background-image: url("");    
-}
-.image-6{
-    background-image: url("");    
-}
-.image-7{
-    background-image: url("");    
-}
-.image-8{
-    background-image: url("");    
-}
-.image-9{
-    background-image: url("");    
-}*/
 /*CONTACT*/
 .links {
     display: flex;
@@ -319,19 +259,21 @@ p {
         grid-template-columns: repeat(1, 1fr);
     }
     .logo{
+        margin-bottom: 15px;        
         grid-area: 1/1/2/2;
     }
     .menubtn{
-
+        margin: 25px;
     }
     h2{
         margin: 25px 0;
     }
-    .photoarea {
-        grid-template-columns: 1fr;
+    .gallery{
+        border: none;
+        margin: 30px 0;
+        padding: 0.5rem;
     }
-    .pre-btn,
-    .nxt-btn {
-        border-radius: 0;
+    .photosets {
+        margin: 1rem;
     }
 }
