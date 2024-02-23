@@ -39,10 +39,7 @@ html {
 }
 @media (pointer:coarse) {
     :root {
-    --f2: 2.75rem
-    }
-    .photosets{
-        mix-blend-mode: normal;
+    --f2: 1.75rem
     }
 }
 
@@ -163,11 +160,10 @@ p {
 .photoarea {
     display: grid;
     background-color: var(--bg);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: 20rem;
     grid-auto-rows: 20rem;
     margin: 30px 0;
-
 }
 .photosets {
     position: relative;
@@ -197,15 +193,15 @@ p {
 .gallery {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
-    gap: 0.5rem;
+    gap: .5rem;
     background-color: var(--fg);
     border: 30px solid;
         border-image-source: url("border.png");
         border-image-slice: 60;
         border-image-repeat: round; 
-        border-image-outset: 10px;
+        border-image-outset: 10px;   
     margin: 30px;
     padding: 0;
 
@@ -218,15 +214,18 @@ p {
     scroll-snap-align: center;  
     background-position: center;
     background-size: cover;
+    object-fit: cover;
+    aspect-ratio: 2/3;
+    transition: all .25s ease;
 }
 .gal1{
     display: block;
 }
 .gal2{
-    display: block;
+    display: none;
 }
 .gal3{
-    display: block;
+    display: none;
 }
 /*HOME*/
 
@@ -269,9 +268,14 @@ p {
         margin: 25px 0;
     }
     .gallery{
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
         border: none;
         margin: 30px 0;
-        padding: 0.5rem;
+        padding: .5rem;
+    }
+    .gallery-image{
+        aspect-ratio: 1/1;
     }
     .photosets {
         margin: 1rem;
