@@ -58,52 +58,52 @@ function otherbtn() {
       });   
 }
 /*FILMMAKING*/
-SF1.style.display = "block";
-SF2.style.display = "none";
-SF3.style.display = "none";
-SF4.style.display = "none";
-QS1.style.display = "block";
-QS2.style.display = "none";
-QS3.style.display = "none";
-QS4.style.display = "none";
-
-function playSF1() {
-SF1.style.display = "block";
-SF2.style.display = "none";
-SF3.style.display = "none";
-SF4.style.display = "none";
-  QS1.style.display = "block";
-  QS2.style.display = "none";
-  QS3.style.display = "none";
-  QS4.style.display = "none";
-} 
-function playSF2() {
-SF1.style.display = "none";  
-SF2.style.display = "block";
-SF3.style.display = "none";
-SF4.style.display = "none";
-  QS1.style.display = "none";
-  QS2.style.display = "block";
-  QS3.style.display = "none";
-  QS4.style.display = "none";
-} 
-function playSF3() {
-SF1.style.display = "none";
-SF2.style.display = "none";  
-SF3.style.display = "block";
-SF4.style.display = "none";
-  QS1.style.display = "none";
-  QS2.style.display = "none";
-  QS3.style.display = "block";
-  QS4.style.display = "none";
-} 
-function playSF4() {
 SF1.style.display = "none";
 SF2.style.display = "none";
 SF3.style.display = "none";
 SF4.style.display = "block";
-  QS1.style.display = "none";
-  QS2.style.display = "none";
-  QS3.style.display = "none";
-  QS4.style.display = "block";
+
+function playSF1() {
+  scrollup()
+SF1.style.display = "block";
+SF2.style.display = "none";
+SF3.style.display = "none";
+SF4.style.display = "none";
+DT1.classList.add("Tdetails");
+DT2.classList.remove("Tdetails");
+DT3.classList.remove("Tdetails");
+DT4.classList.remove("Tdetails");
+} 
+function playSF2() {
+  scrollup()
+SF1.style.display = "none";  
+SF2.style.display = "block";
+SF3.style.display = "none";
+SF4.style.display = "none";
+DT1.classList.remove("Tdetails");
+DT2.classList.add("Tdetails");
+DT3.classList.remove("Tdetails");
+DT4.classList.remove("Tdetails");
+} 
+function playSF3() {
+  scrollup()
+SF1.style.display = "none";
+SF2.style.display = "none";  
+SF3.style.display = "block";
+SF4.style.display = "none";
+DT1.classList.remove("Tdetails");
+DT2.classList.remove("Tdetails");
+DT3.classList.add("Tdetails");
+DT4.classList.remove("Tdetails");
+} 
+function playSF4() {
+  scrollup()
+SF1.style.display = "none";
+SF2.style.display = "none";
+SF3.style.display = "none";
+SF4.style.display = "block";
+DT1.classList.remove("Tdetails");
+DT2.classList.remove("Tdetails");
+DT3.classList.remove("Tdetails");
+DT4.classList.add("Tdetails");
 } 
