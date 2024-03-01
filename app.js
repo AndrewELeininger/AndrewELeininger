@@ -15,10 +15,6 @@ function back() {
 }
 /*PHOTOGRAPHY*/
 
-const galleryContainers = [...document.querySelectorAll('.gallery-container')];
-const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
-const preBtn = [...document.querySelectorAll('.pre-btn')];
-
 function scrolldown() {
     window.scrollTo(0, document.body.scrollHeight);    
 }
@@ -61,15 +57,53 @@ function otherbtn() {
         gal3.style.display = "block";
       });   
 }
+/*FILMMAKING*/
+SF1.style.display = "block";
+SF2.style.display = "none";
+SF3.style.display = "none";
+SF4.style.display = "none";
+QS1.style.display = "block";
+QS2.style.display = "none";
+QS3.style.display = "none";
+QS4.style.display = "none";
 
-galleryContainers.forEach((item, i) => {
-    let containerDimensions = item.getBoundingClientRect();
-    let containerWidth = containerDimensions.width;
-
-    nxtBtn[i].addEventListener('click', () => {
-        item.scrollLeft += containerWidth;
-    })
-    preBtn[i].addEventListener('click', () => {
-        item.scrollLeft -= containerWidth;
-    })
-})
+function playSF1() {
+SF1.style.display = "block";
+SF2.style.display = "none";
+SF3.style.display = "none";
+SF4.style.display = "none";
+  QS1.style.display = "block";
+  QS2.style.display = "none";
+  QS3.style.display = "none";
+  QS4.style.display = "none";
+} 
+function playSF2() {
+SF1.style.display = "none";  
+SF2.style.display = "block";
+SF3.style.display = "none";
+SF4.style.display = "none";
+  QS1.style.display = "none";
+  QS2.style.display = "block";
+  QS3.style.display = "none";
+  QS4.style.display = "none";
+} 
+function playSF3() {
+SF1.style.display = "none";
+SF2.style.display = "none";  
+SF3.style.display = "block";
+SF4.style.display = "none";
+  QS1.style.display = "none";
+  QS2.style.display = "none";
+  QS3.style.display = "block";
+  QS4.style.display = "none";
+} 
+function playSF4() {
+SF1.style.display = "none";
+SF2.style.display = "none";
+SF3.style.display = "none";
+SF4.style.display = "block";
+  QS1.style.display = "none";
+  QS2.style.display = "none";
+  QS3.style.display = "none";
+  QS4.style.display = "block";
+} 
