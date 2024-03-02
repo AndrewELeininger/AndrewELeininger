@@ -10,47 +10,23 @@
     <h2>theater</h2>
     <button class="backbtn" onclick="back()">back</button>
 
-
     <div class="viewer">
         <iframe id="SF4" src="https://www.youtube.com/embed/_jRQ7LRQr9o?si=b3zPGcrlkhU-2HYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>               
         <iframe id="SF3" src="https://www.youtube.com/embed/if4pQVNGApQ?si=i8BpxCgCaITuyJzn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe id="SF2" src="https://www.youtube.com/embed/cGBmXPeW7xY?si=c2jnHtKfmCQxBTvL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>               
         <iframe id="SF1" src="https://www.youtube.com/embed/FK6tUSo-ocE?si=UQftyC4c9ZAgNDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div> 
-  
-    <div class="list">
 
-        <div id="DT4" class="details">
-            <img class="poster" onclick="playSF4()" src="TheEscapePoster.png">
-            <img class="still" src="still0007.jpg">
-            <img class="still" src="still0008.jpg">
-            <img class="still" src="still0009.jpg">            
-            <p class="summary">After years living inside the walls of a shady institution, Patient Zero has formed a plan and is getting ready to act on it. This plan may prove perilous, but no risk is too great for the chance of escape. </p>
-            <p class="info">runtime 4:38<br>directed by andrew leininger<br>music by jacob ryman<br>toastman2024</p>
-        </div>
-        <div id="DT3" class="details">
-            <img class="poster" onclick="playSF3()" src="TheFeatherAndTheCrownPoster.png">    
-            <img class="still" src="still0010.jpg">
-            <img class="still" src="still0011.jpg">
-            <img class="still" src="still0012.jpg">           
-            <p class="summary">Deep in the forests, high in the hills, in legends lost to time, there lives a creature, half man and half bird. Of his strength all are afraid, all but one, one man, one king.</p>
-            <p class="info">runtime 3:08<br>directed by andrew leininger<br>toastman2023</p>
-        </div>
-        <div id="DT2" class="details">
-            <img class="poster" onclick="playSF2()" src="TheThieflingsPoster.png">
-            <img class="still" src="still0001.jpg">
-            <img class="still" src="still0002.jpg">
-            <img class="still" src="still0003.jpg">            
-            <p class="summary">Lord Alister and his ragtag band of rebellious knights have received word that their old friend, Lord Jerome, will be passing through the outer borders, carrying a very valuable piece of cargo. Unable to pass up such an opportunity, they devise a plan to intercept him, but it may not be as simple as they hope.</p>
-            <p class="info">runtime 6:56<br>directed by andrew leininger<br>quest peter leininger<br>toastman2022</p>
-        </div>
-        <div id="DT1" class="details">
-            <img class="poster" onclick="playSF1()" src="TheFadingLightPoster.png">
-            <img class="still" src="still0004.jpg">
-            <img class="still" src="still0005.jpg">
-            <img class="still" src="still0006.jpg">            
-            <p class="summary">The sole survivor of a shipwreck has been stranded on a strange, unknown island where the only food he has to eat is small pink flowers, and the only friend he has is a magical floating fish. Every day as the sun begins to set, he must hide himself, and the fish, to avoid the dangers of the night, but he can't hide forever and soon he will have to face his fears and risk everything for a chance of freedom.</p>    
-            <p class="info">runtime 6:46<br>directed by andrew leininger<br>toastman2020</p>
+    <div class="posters">
+        <div class="details">
+            <div id="SP" class="stills"></div>
+            <p id="text" class="summary"></p>
+        </div>  
+        <div class="list">    
+                <img id="FP4" class="poster" onclick="play(4)" src="TheEscapePoster.png">
+                <img id="FP3" class="poster" onclick="play(3)" src="TheFeatherAndTheCrownPoster.png">    
+                <img id="FP2" class="poster" onclick="play(2)" src="TheThieflingsPoster.png">
+                <img id="FP1" class="poster" onclick="play(1)" src="TheFadingLightPoster.png">
         </div>
     </div>
 
@@ -60,7 +36,7 @@
             <a href="https://www.youtube.com/@ToastMan-yi3ef/featured">Youtube</a>       
             <a href="https://www.instagram.com/_andrew_e_l/">Instagram</a>    
         </div>
-    </section>    
+    </section>  
 </body>
 
 <script src="app.js"></script>

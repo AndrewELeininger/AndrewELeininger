@@ -45,7 +45,6 @@ function streetbtn() {
         gal3.style.display = "none";
       });  
 }
-
 function otherbtn() {
     document.querySelectorAll(".gal1").forEach(function(gal1) {
         gal1.style.display = "none";
@@ -58,52 +57,44 @@ function otherbtn() {
       });   
 }
 /*FILMMAKING*/
-SF1.style.display = "none";
-SF2.style.display = "none";
-SF3.style.display = "none";
-SF4.style.display = "block";
 
-function playSF1() {
-  scrollup()
-SF1.style.display = "block";
-SF2.style.display = "none";
-SF3.style.display = "none";
-SF4.style.display = "none";
-DT1.classList.add("Tdetails");
-DT2.classList.remove("Tdetails");
-DT3.classList.remove("Tdetails");
-DT4.classList.remove("Tdetails");
-} 
-function playSF2() {
-  scrollup()
-SF1.style.display = "none";  
-SF2.style.display = "block";
-SF3.style.display = "none";
-SF4.style.display = "none";
-DT1.classList.remove("Tdetails");
-DT2.classList.add("Tdetails");
-DT3.classList.remove("Tdetails");
-DT4.classList.remove("Tdetails");
-} 
-function playSF3() {
-  scrollup()
-SF1.style.display = "none";
-SF2.style.display = "none";  
-SF3.style.display = "block";
-SF4.style.display = "none";
-DT1.classList.remove("Tdetails");
-DT2.classList.remove("Tdetails");
-DT3.classList.add("Tdetails");
-DT4.classList.remove("Tdetails");
-} 
-function playSF4() {
-  scrollup()
 SF1.style.display = "none";
 SF2.style.display = "none";
 SF3.style.display = "none";
 SF4.style.display = "block";
-DT1.classList.remove("Tdetails");
-DT2.classList.remove("Tdetails");
-DT3.classList.remove("Tdetails");
-DT4.classList.add("Tdetails");
-} 
+const SP = document.getElementById('SP');
+
+function changeText(newText) {
+  document.getElementById('text').innerHTML = newText;
+}
+
+function play(Number) {
+  scrollup();
+  const summaries = [  
+  "The sole survivor of a shipwreck has been stranded on a strange, unknown island where the only food he has to eat is small pink flowers, and the only friend he has is a magical floating fish. Every day as the sun begins to set, he must hide himself, and the fish, to avoid the dangers of the night, but he can't hide forever and soon he will have to face his fears and risk everything for a chance of freedom.",
+  "Lord Alister and his ragtag band of rebellious knights have received word that their old friend, Lord Jerome, will be passing through the outer borders, carrying a very valuable piece of cargo. Unable to pass up such an opportunity, they devise a plan to intercept him, but it may not be as simple as they hope.",
+  "Deep in the forests, high in the hills, in legends lost to time, there lives a creature, half man and half bird. Of his strength all are afraid, all but one, one man, one king.",
+  "After years living inside the walls of a shady institution, Patient Zero has formed a plan is getting ready to act on it. This plan may prove perilous, but no risk is too great for the chance of escape. ",
+  ];
+  const selectedSummary = summaries[Number - 1];
+  changeText(selectedSummary);
+  let stillNumber = [Number];
+  SP.style.animationName = 'slideshow' + stillNumber;
+  const films = ['SF1', 'SF2', 'SF3', 'SF4'];
+  const posters = ['FP1', 'FP2', 'FP3', 'FP4'];
+  const targetClass = "Tposter";
+
+ films.forEach((film, index) => {
+    const display = film === films[Number - 1] ? 'block' : 'none';
+    document.getElementById(film).style.display = display;
+  });
+
+  posters.forEach((poster, index) => {
+    const classAction = index === Number - 1 ? 'add' : 'remove';
+    if (classAction === 'add'){
+      document.getElementById(poster).classList.add("Tposter");
+    } else if (classAction === 'remove') {
+      document.getElementById(poster).classList.remove("Tposter"); 
+    }
+  }); 
+}

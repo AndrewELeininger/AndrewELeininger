@@ -37,28 +37,20 @@ html {
     --bg: rgb(255, 242, 242);
     --fg: rgb(20, 19, 19);
 }
+::-webkit-scrollbar {
+    display: none;
+}
 @media (pointer:coarse) {
     :root {
     --f2: 1.75rem
     }
+    .summary {
+        display: none;
+    }
+    .info {
+        display: none;
+    }
 }
-
-::-webkit-scrollbar {
-    width: 15px;  
-}
-::-webkit-scrollbar-track {
-    background: var(--fg);
-}
-::-webkit-scrollbar-thumb {
-    aspect-ratio: 1/1;
-    border-radius: 100vw;
-    border: solid 3px var(--fg);
-    background: var(--bg);
-}
-::-webkit-scrollbar {
-    display: none;
-}
-
 body{
     background-color: var(--bg);
     margin: 0;
@@ -231,9 +223,34 @@ p {
     display: none;
 }
 /*FILM*/
+@keyframes slideshow1 {
+    0% {background-image: url("still1.jpg");}
+    33% {background-image: url("still2.jpg");}
+    66% {background-image: url("still3.jpg");}
+    100% {background-image: url("still1.jpg");}
+}
+@keyframes slideshow2 {
+    0% {background-image: url("still4.jpg");}
+    33% {background-image: url("still5.jpg");}
+    66% {background-image: url("still6.jpg");}
+    100% {background-image: url("still4.jpg");}
+}
+@keyframes slideshow3 {
+    0% {background-image: url("still7.jpg");}
+    33% {background-image: url("still8.jpg");}
+    66% {background-image: url("still9.jpg");}
+    100% {background-image: url("still7.jpg");}
+}
+@keyframes slideshow4 {
+    0% {background-image: url("still10.jpg");}
+    33% {background-image: url("still11.jpg");}
+    66% {background-image: url("still12.jpg");}
+    100% {background-image: url("still10.jpg");}
+}
 .viewer {
     width: 50%;
     padding: 0 25%;
+    background-color: var(--fg);
     aspect-ratio: 16/9;
 }
 .viewer iframe {
@@ -241,55 +258,65 @@ p {
     height: 100%;
     border-radius: .5rem;
 }
-
-.list {
+.posters {
     display: grid;
-    background-color: var(--fg);
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 312px);
-    gap: 2.5rem;
-    padding: 2.5rem;
-}
-.Tdetails {
-    grid-row: 1/2;
+    background-color: var(--fg);     
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
 .details {
-    display: grid;
+    grid-area: 1/1/2/2;
     width: 50%;
-    margin: auto;
-    grid-template-columns: 250px 1fr 2fr;
-    grid-template-rows: repeat(3, 104px);
+    margin: 0 auto;
+        display: grid;
+        grid-template-columns: 250px 1fr 1fr;
+        grid-template-rows: repeat(4, 312px);
+        padding: 2.5rem;
+}
+.stills {
+    width: 100%;
+    height: 100%;
+    grid-area: 1/2/2/4;
+    background-size: cover;
+    background-position: center;
+        animation-name: slideshow4;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function:cubic-bezier(0, 0, 0, 2);
+    border-radius: .5rem;
 }
 .summary {
-    color: grey;
-    margin: 15px;
-    grid-column: 3/4;
-    grid-row: 1/3;
-    overflow-y: scroll;
+    color: rgba(255, 255, 255, 0.5);
+    background: linear-gradient(to right,rgba(0, 0, 0, 0), var(--fg));   
+    grid-area: 1/2/2/4;
+    border-radius: .5rem;
+    margin: 0;
+    padding: 2.5rem;
 }
-.info {
-    color: grey;
-    margin: 15px;
-    text-transform: capitalize;  
+.list {
+    grid-area: 1/1/2/2;
+    width: 50%;
+    margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 312px);
+        gap: 2.5rem;
+        padding: 2.5rem;
+}
+.Tposter {
+    grid-row: 1/2;
 }
 .poster {
-    width: 250px;    
-    height: 312px;
+    display: grid;
+    height: 100%;
     scale: 107%;
-    grid-row: span 3;
     border-radius: .5rem;
     transition: all .25s ease;       
 }
 .poster:hover {
     scale: 110%;
 }
-.still {
-    width: 100%;
-    height: 100%;
-    align-self: center;
-    object-fit: cover;
-}
-
 /*CONTACT*/
 .links {
     display: flex;
@@ -350,16 +377,11 @@ p {
     .viewer iframe {
         border-radius: 0;
     }
+
     .details {
-        width: 100%;
-        grid-template-columns: 250px 1fr 1fr 1fr;
-        grid-template-rows: 144px 174px;
+        width: 90%;        
     }
-    .summary {
-        grid-column: span 2;
-        grid-row: span 1;
-    }
-    .poster {
-    grid-row: span 2;
+    .list {
+        width: 90%;
     }
 }
