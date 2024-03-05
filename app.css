@@ -38,7 +38,17 @@ html {
     --fg: rgb(20, 19, 19);
 }
 ::-webkit-scrollbar {
-    display: none;
+   width: 15px;
+   height: 0; 
+}
+::-webkit-scrollbar-thumb {
+    margin: 1rem 0;
+    background-color: var(--fg);
+    border: solid 2px var(--bg);
+    border-radius: 1vw;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--fg);
 }
 @media (pointer:coarse) {
     :root {
@@ -90,7 +100,19 @@ p {
         border-image-repeat: round;  
     margin: 25px;   
 }
-
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    scale: 75%;
+    rotate: 5deg;
+    transition: all .75s;
+}
+.show {
+    opacity: 1;
+    filter: none;
+    scale: 100%;
+    rotate: 0deg;
+}
 /*border: 30px solid;
 border-image-source: url("border2.png");
 border-image-slice: 60;
@@ -133,25 +155,10 @@ margin: 15px;  */
     opacity: 90%;
     border-image-slice: 70;
 }
-.homearea{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-}
-.homearea img {
-    width: 80%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: double 6px var(--fg);
-    mix-blend-mode: luminosity;
-}
-.homearea p {
-    font-size: var(--f1);
-    text-transform: uppercase;
-    margin: 0;
-}
 /*PHOTOGRAPHY*/
+#photoGallery {
+    padding: 1rem;
+}
 .divide {
     height: clamp(2rem, 3vw + 1rem, 4rem);  
     width: 100%;
@@ -171,14 +178,13 @@ margin: 15px;  */
 }
 .photosets {
     position: relative;
-    border-radius: 3px;
-    border: double 6px var(--fg);
+    border: double 6px rgba(0, 0, 0, 0.5);
     mix-blend-mode: luminosity;
     transition: all ease 0.25s;
 }
 .photosets:hover {
+    border: double 6px rgba(0, 0, 0, 0.25);
     mix-blend-mode: normal; 
-    scale: 101%;
 }
 .photosets img {
     object-fit: cover;
@@ -209,7 +215,6 @@ margin: 15px;  */
         border-image-outset: 10px;   
     margin: 30px;
     padding: 0;
-
 }
 .gallery-image {
     width: 100%;
@@ -221,8 +226,58 @@ margin: 15px;  */
     background-size: cover;
     object-fit: cover;
     aspect-ratio: 2/3;
-    transition: all .25s ease;
 }
+
+
+.gallery-image:nth-child(4) {
+    transition-delay: 50ms;
+}
+.gallery-image:nth-child(7) {
+    transition-delay: 100ms;
+}
+.gallery-image:nth-child(10) {
+    transition-delay: 150ms;
+}
+.gallery-image:nth-child(13) {
+    transition-delay: 200ms;
+}
+.gallery-image:nth-child(16) {
+    transition-delay: 250ms;
+}
+
+.gallery-image:nth-child(5) {
+    transition-delay: 50ms;
+}
+.gallery-image:nth-child(8) {
+    transition-delay: 100ms;
+}
+.gallery-image:nth-child(11) {
+    transition-delay: 150ms;
+}
+.gallery-image:nth-child(14) {
+    transition-delay: 200ms;
+}
+.gallery-image:nth-child(17) {
+    transition-delay: 250ms;
+}
+
+.gallery-image:nth-child(6) {
+    transition-delay: 50ms;
+}
+.gallery-image:nth-child(9) {
+    transition-delay: 100ms;
+}
+.gallery-image:nth-child(12) {
+    transition-delay: 150ms;
+}
+.gallery-image:nth-child(15) {
+    transition-delay: 200ms;
+}
+.gallery-image:nth-child(18) {
+    transition-delay: 250ms;
+}
+
+
 .gal1{
     display: block;
 }
@@ -290,18 +345,17 @@ margin: 15px;  */
     grid-area: 1/2/2/4;
     background-size: cover;
     background-position: center;
-        animation-name: slideshow4;
+    background-image: url('still4.jpg');
+        /*animation-name: slideshow4;
         animation-duration: 15s;
         animation-iteration-count: infinite;
         animation-direction: normal;
-        animation-timing-function:cubic-bezier(0, 0, 0, 2);
-    border-radius: .5rem;
+        animation-timing-function:cubic-bezier(0, 0, 0, 2);*/
 }
 .summary {
     color: rgba(255, 255, 255, 0.5);
     background: linear-gradient(to right,rgba(0, 0, 0, 0), var(--fg));   
     grid-area: 1/2/2/4;
-    border-radius: .5rem;
     margin: 0;
     padding: 1rem 2rem;
     overflow-y: hidden;
@@ -341,12 +395,6 @@ margin: 15px;  */
     opacity: 100%;
     box-shadow: 0 0 15px black;
 }
-.hidden {
-    transform: translateX(-100%);
-}
-.show {
-    transform: translateX(0);
-}
 /*CONTACT*/
 .links {
     display: flex;
@@ -370,6 +418,8 @@ margin: 15px;  */
     font-size: var(--f2);
     margin: 1rem 0;
 }
+/*HIDDEN*/
+
 @media screen and (max-width: 1000px) {   
     .homemenu{
         background-color: var(--bg);

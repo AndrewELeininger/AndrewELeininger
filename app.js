@@ -1,8 +1,28 @@
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+function scrolldown() {
+    window.scrollTo(0, document.body.scrollHeight);    
+}
+function scrollup() {
+  window.scrollTo(top);
+}
+
 function sorry() {
     alert("sorry this page is currently under developement")
 }
 function photography() {
-    window.location.href="photo.html";
+  document.getElementById('photoGallery').scrollIntoView();
 }
 function filmmaking() {
     window.location.href="film.html";
@@ -15,12 +35,7 @@ function back() {
 }
 
 /*PHOTOGRAPHY*/
-function scrolldown() {
-    window.scrollTo(0, document.body.scrollHeight);    
-}
-function scrollup() {
-  window.scrollTo(top);
-}
+
 function naturebtn() { 
 document.querySelectorAll(".gal1").forEach(function(gal1) {
     gal1.style.display = "block";
@@ -77,7 +92,8 @@ function play(Number) {
   const selectedSummary = summaries[Number - 1];
   changeText(selectedSummary);
   let stillNumber = [Number];
-  SP.style.animationName = 'slideshow' + stillNumber;
+  var stillUrl = 'still' + stillNumber + '.jpg';
+  SP.style.backgroundImage = "url('" + stillUrl + "')";
   const films = ['SF1', 'SF2', 'SF3', 'SF4'];
   const posters = ['FP1', 'FP2', 'FP3', 'FP4'];
   const targetClass = "Tposter";
@@ -96,16 +112,3 @@ function play(Number) {
     }
   }); 
 }
-const observer = new IntersectionObserver((entries) =>{
-  entries.forEach((entry) => {
-    console.log(entry)
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
-    }
-  });
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html> 
     <link rel="stylesheet" href="app.css">
+    <script defer src="app.js"></script>
 <head>
     <title>Home</title>
     <link rel="icon" type="image/png" href="img/favicon2.png">    
@@ -15,27 +16,57 @@
             <button class="menubtn" onclick="photography()">photo gallery</button>
             <button class="menubtn" onclick="filmmaking()">movie theater</button>
             <button class="menubtn" onclick="animation()">Rendering</button>
-        </div>
-
-        <div class="homearea"> 
-            <img src="imgphoto.jpg">
-            <img src="imgfilm.jpg">
-            <img src="img3d.jpg">             
-        </div>   
+        </div> 
             
     <p class="fancy-p">Hello, this is a test paragraph to see how the fancy
         old fasioned borders look. pretty nice right? I think I'll put them 
         on everything.
     </p> 
+    <h2 id="photoGallery">photo gallery</h2> 
+    <div class="divide"></div>
+    <div class="gallery">
+            <img src="nat1.jpg" class="gallery-image hidden gal1">
+            <img src="str1.jpg" class="gallery-image hidden gal2"> 
+            <img src="flr1.jpg" class="gallery-image hidden gal3"> 
+            <img src="nat2.jpg" class="gallery-image hidden gal1"> 
+            <img src="str2.jpg" class="gallery-image hidden gal2">
+            <img src="flr2.jpg" class="gallery-image hidden gal3">
+            <img src="nat3.jpg" class="gallery-image hidden gal1">
+            <img src="str3.jpg" class="gallery-image hidden gal2">
+            <img src="flr3.jpg" class="gallery-image hidden gal3"> 
+            <img src="nat4.jpg" class="gallery-image hidden gal1">
+            <img src="str4.jpg" class="gallery-image hidden gal2"> 
+            <img src="flr4.jpg" class="gallery-image hidden gal3"> 
+            <img src="nat5.jpg" class="gallery-image hidden gal1"> 
+            <img src="str5.jpg" class="gallery-image hidden gal2">
+            <img src="flr5.jpg" class="gallery-image hidden gal3">
+            <img src="nat6.jpg" class="gallery-image hidden gal1">
+            <img src="str6.jpg" class="gallery-image hidden gal2">
+            <img src="flr6.jpg" class="gallery-image hidden gal3">      
+    </div>    
+    <div class="photoarea">
+        <figure onclick="naturebtn()" class="photosets">
+            <figcaption>nature</figcaption>
+            <img src="nature.JPG">
+        </figure>
+        <figure onclick="streetbtn()" class="photosets">
+            <figcaption>street</figcaption>
+            <img src="street.JPG">
+        </figure>
+        <figure onclick="otherbtn()" class="photosets">
+            <figcaption>flower</figcaption>
+            <img src="other.JPG">
+        </figure>        
+    </div>  
+
     <section class="section2">
         <div class="links">
             <p class="email">leininger5andrewelliot@gmail.com</p>             
             <a href="https://www.youtube.com/@ToastMan-yi3ef/featured">Youtube</a>       
             <a href="https://www.instagram.com/_andrew_e_l/">Instagram</a>    
         </div>
-
+    </section>
     </section>
 </body>
 
-<script src="app.js"></script>
 </html>
