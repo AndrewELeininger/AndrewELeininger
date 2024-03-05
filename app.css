@@ -83,13 +83,20 @@ p {
     font-size: var(--f2);
     color: var(--bg);
     background-color: var(--fg);
-    border: 30px solid;
-    border-image-source: url("border.png");
-    border-image-outset: 10px;
-    border-image-slice: 60;
-    border-image-repeat: round;  
+        border: 30px solid;
+        border-image-source: url("border.png");
+        border-image-outset: 10px;
+        border-image-slice: 60;
+        border-image-repeat: round;  
     margin: 25px;   
 }
+
+/*border: 30px solid;
+border-image-source: url("border2.png");
+border-image-slice: 60;
+border-image-repeat: round;  
+margin: 15px;  */
+
 /*HOME*/
 .homemenu{
     display: grid;
@@ -128,13 +135,21 @@ p {
 }
 .homearea{
     position: relative;
-    justify-content: center;
-    background-color: var(--bg);    
-        border: 30px solid;
-        border-image-source: url("border2.png");
-        border-image-slice: 60;
-        border-image-repeat: round;  
-    margin: 15px;     
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+.homearea img {
+    width: 80%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: double 6px var(--fg);
+    mix-blend-mode: luminosity;
+}
+.homearea p {
+    font-size: var(--f1);
+    text-transform: uppercase;
+    margin: 0;
 }
 /*PHOTOGRAPHY*/
 .divide {
@@ -156,13 +171,14 @@ p {
 }
 .photosets {
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+    border-radius: 3px;
+    border: double 6px var(--fg);
     mix-blend-mode: luminosity;
-    transition: all ease 0.2s;
+    transition: all ease 0.25s;
 }
 .photosets:hover {
-    mix-blend-mode: normal;
-    box-shadow: black 0 0 15px;
+    mix-blend-mode: normal; 
+    scale: 101%;
 }
 .photosets img {
     object-fit: cover;
@@ -304,9 +320,6 @@ p {
 .empty {
     grid-area: 1/2/2/4;
 }
-.Tposter {
-    grid-row: 1/2;
-}
 .poster {
     display: grid;
     height: 100%;
@@ -316,11 +329,23 @@ p {
     background-color: black;
     box-shadow: 0 0 5px black;
     border-radius: .5rem;    
+    opacity: 50%;
     transition: all .25s ease;         
+}
+.Tposter {
+    grid-row: 1/2;
+    opacity: 100%;
 }
 .poster:hover {
     scale: 107%;
+    opacity: 100%;
     box-shadow: 0 0 15px black;
+}
+.hidden {
+    transform: translateX(-100%);
+}
+.show {
+    transform: translateX(0);
 }
 /*CONTACT*/
 .links {

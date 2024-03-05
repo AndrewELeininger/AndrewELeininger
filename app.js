@@ -13,15 +13,14 @@ function animation() {
 function back() {
     window.location.href="index.html";
 }
-/*PHOTOGRAPHY*/
 
+/*PHOTOGRAPHY*/
 function scrolldown() {
     window.scrollTo(0, document.body.scrollHeight);    
 }
 function scrollup() {
   window.scrollTo(top);
 }
-
 function naturebtn() { 
 document.querySelectorAll(".gal1").forEach(function(gal1) {
     gal1.style.display = "block";
@@ -67,7 +66,6 @@ const SP = document.getElementById('SP');
 function changeText(newText) {
   document.getElementById('text').innerHTML = newText;
 }
-
 function play(Number) {
   scrollup();
   const summaries = [  
@@ -98,3 +96,16 @@ function play(Number) {
     }
   }); 
 }
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
