@@ -22,7 +22,7 @@ function sorry() {
     alert("sorry this page is currently under developement")
 }
 function photography() {
-  document.getElementById('photoGallery').scrollIntoView();
+  document.getElementById('phoGal').scrollIntoView();
 }
 function filmmaking() {
     window.location.href="film.html";
@@ -33,7 +33,6 @@ function animation() {
 function back() {
     window.location.href="index.html";
 }
-
 /*PHOTOGRAPHY*/
 
 function naturebtn() { 
