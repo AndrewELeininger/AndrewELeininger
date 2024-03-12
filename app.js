@@ -1,15 +1,3 @@
-const observer = new IntersectionObserver((entries) =>{
-  entries.forEach((entry) => {
-    console.log(entry)
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
-    }
-  });
-});
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
 
 function scrolldown() {
     window.scrollTo(0, document.body.scrollHeight);    
@@ -28,13 +16,25 @@ function filmmaking() {
     window.location.href="film.html";
 }
 function animation() {
-    window.location.href="3D.html";
+  document.getElementById('renders').scrollIntoView();
 }
 function back() {
     window.location.href="index.html";
 }
 /*PHOTOGRAPHY*/
 
+const observer = new IntersectionObserver((entries) =>{
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show');
+    }
+  });
+});
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 function naturebtn() { 
 document.querySelectorAll(".gal1").forEach(function(gal1) {
     gal1.style.display = "block";
@@ -46,7 +46,6 @@ document.querySelectorAll(".gal1").forEach(function(gal1) {
     gal3.style.display = "none";
   });       
 }
-
 function streetbtn() {
     document.querySelectorAll(".gal1").forEach(function(gal1) {
         gal1.style.display = "none";
@@ -69,6 +68,8 @@ function otherbtn() {
         gal3.style.display = "block";
       });   
 }
+/*RENDERS*/
+
 /*FILMMAKING*/
 
 SF1.style.display = "none";

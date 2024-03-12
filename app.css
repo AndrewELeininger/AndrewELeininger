@@ -285,8 +285,34 @@ margin: 15px;  */
 .gal3{
     display: none;
 }
-/*FILM*/
 
+/*RENDERS*/
+.breakdown {
+    display: grid;
+    background-color: var(--fg);
+    border-top: double 6px var(--bg);
+    border-bottom: double 6px var(--bg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 25px 25%;
+}
+.slide {
+    width: 100%;
+    border-radius: 50%;
+    transition: all ease .5s;
+}
+.folio {
+    display: grid;
+    background-color: var(--fg);
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+    padding: 1rem;
+}
+.piece {
+    width: 100%;
+    border-radius: .5rem;
+}
+/*FILM*/
 #movieTheater {
     color: var(--bg);
     font-size: var(--f1);    
@@ -428,6 +454,10 @@ margin: 15px;  */
         margin: 1rem;
     }
     
+    .breakdown {
+        padding: 25px;
+    }
+
     .viewer {
         width: 100%;
         padding: 0;
