@@ -12,7 +12,8 @@
         
     </section>
         <div class="homemenu">
-            <div class="logo"></div> 
+            <div class="menubg"></div>
+            <div class="logo"></div>
             <button class="menubtn" onclick="filmmaking()">movie theater</button>            
             <button class="menubtn" onclick="photography()">photo gallery</button>
             <button class="menubtn" onclick="animation()">Rendering</button>
@@ -21,13 +22,14 @@
     <p class="fancy-p">Hello! My name is Andrew Leininger, founder of
         ToastMan Productions. This is where I house all of my favorite
         works and projects for everyone to see and, hopefully, appriciate.
-        No matter where I get too on my
-        journey there will always be more things to learn and more roads
-        to explore. My goal is to keep growing in my appriciation of art 
-        and to keep improving my skills as an artist. 
-    </p> 
-    <h2 id="phoGal">photo gallery</h2> 
-    <div class="divide"></div>
+        No matter where I get too on my journey there will always be more
+        things to learn and more roads to explore. My goal is to keep
+        growing in my appriciation of art and to keep improving my skills 
+        as an artist. 
+    </p>
+
+    <h2 id="phoGal" class="hidden">photo gallery</h2> 
+    <div class="divide hidden"></div>       
     <div class="gallery">
             <img src="nat1.jpg" class="gallery-image hidden gal1">
             <img src="str1.jpg" class="gallery-image hidden gal2"> 
@@ -65,9 +67,9 @@
 
     <h2 id="renders">rendering</h2>
     <div class="breakdown">
-        <img class="slide" src="Rrend.png"> 
-        <img class="slide" src="Rmode.png">
-        <img class="slide" src="Rwire.png">
+        <img class="slide hidden" src="Rrend.png"> 
+        <img class="slide hidden" src="Rmode.png">
+        <img class="slide hidden" src="Rwire.png">
     </div>
     <div class="folio">
         <img class="piece" src="imgfilm.jpg">
