@@ -7,7 +7,7 @@ function scrollup() {
 }
 
 function sorry() {
-    alert("sorry this page is currently under developement")
+    alert("sorry this website is still currently under developement, some features have yet to be integrated")
 }
 function photography() {
   document.getElementById('phoGal').scrollIntoView();
