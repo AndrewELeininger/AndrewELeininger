@@ -39,7 +39,7 @@ html {
 }
 ::-webkit-scrollbar {
    width: 15px;
-   height: 0; 
+   height: 10; 
 }
 ::-webkit-scrollbar-thumb {
     margin: 1rem 0;
@@ -331,16 +331,43 @@ margin: 15px;  */
     border-radius: 50%;
     transition: all ease .5s;
 }
-.folio {
-    display: grid;
+.background { 
+    position: relative;
     background-color: var(--fg);
-    grid-template-columns: repeat(3, 1fr);
-    gap: .5rem;
-    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 }
-.piece {
+.folioCaption {
+    grid-area: 1/1/2/2;
+    margin: auto;
+    color: var(--bg);
+    font-size: var(--f1);
+    text-transform: uppercase;
+    
+}
+.folio {
+    grid-area: 1/1/2/2;
+    background-color: var(--fg);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25vw;
+    border-radius: .5rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    opacity: 50%;  
+    scale: 80%;  
+    transition: all ease .5s;
+}
+.folio:hover {
+    opacity: 100%;
+}
+.folio > .piece {
+    scroll-snap-align: start;
+    scroll-margin-inline: 1rem;
     width: 100%;
     border-radius: .5rem;
+    scale: 93%;
 }
 /*FILM*/
 #movieTheater {
@@ -492,6 +519,11 @@ margin: 15px;  */
     
     .breakdown {
         padding: 25px;
+    }
+    .folio {
+        grid-auto-columns: 50%;
+        opacity: 100%;
+        scale: 100%;
     }
 
     .viewer {
