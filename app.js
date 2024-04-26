@@ -1,28 +1,16 @@
-
+/*GENERAL*/
 function scrolldown() {
     window.scrollTo(0, document.body.scrollHeight);    
 }
 function scrollup() {
   window.scrollTo(top);
 }
-
 function sorry() {
     alert("sorry this website is still currently under developement, some features have yet to be integrated")
-}
-function photography() {
-  document.getElementById('phoGal').scrollIntoView();
-}
-function filmmaking() {
-    window.location.href="film.html";
-}
-function animation() {
-  document.getElementById('renders').scrollIntoView();
 }
 function back() {
     window.location.href="index.html";
 }
-/*PHOTOGRAPHY*/
-
 const observeHidden = new IntersectionObserver((entries) =>{
   entries.forEach((entry) => {
     console.log(entry)
@@ -36,6 +24,29 @@ const observeHidden = new IntersectionObserver((entries) =>{
 const hiddenElements = document.querySelectorAll('.hiddenB, .hiddenF');
 hiddenElements.forEach((el) => observeHidden.observe(el));
 
+/*POPUP*/
+document.querySelectorAll(".gallery-image, .piece").forEach(image =>{
+  image.onclick = () =>{
+    document.querySelector(".popUp").style.display = "block";
+    document.querySelector(".popUp img").src = image.getAttribute("src");   
+  }
+});
+function popDown() {
+  document.querySelector(".popUp").style.display = "none";
+};
+
+/*HOME*/
+function photography() {
+  document.getElementById('phoGal').scrollIntoView();
+}
+function filmmaking() {
+    window.location.href="film.html";
+}
+function animation() {
+  document.getElementById('renders').scrollIntoView();
+}
+
+/*PHOTOGRAPHY*/
 function naturebtn() { 
 document.querySelectorAll(".gal1").forEach(function(gal1) {
     gal1.style.display = "block";
@@ -69,10 +80,10 @@ function otherbtn() {
         gal3.style.display = "block";
       });   
 }
+
 /*RENDERS*/
 
 /*FILMMAKING*/
-
 SF1.style.display = "none";
 SF2.style.display = "none";
 SF3.style.display = "none";
