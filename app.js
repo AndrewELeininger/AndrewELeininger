@@ -82,6 +82,17 @@ function otherbtn() {
 }
 
 /*RENDERS*/
+const scrollFolio = document.querySelector(".folio");
+
+document.querySelector(".left-arrow").addEventListener("click", () => {
+    scrollFolio.scrollLeft -= 500; 
+});
+
+document.querySelector(".right-arrow").addEventListener("click", () => {
+    scrollFolio.scrollLeft += 500;
+});
+
+
 
 /*FILMMAKING*/
 SF1.style.display = "none";

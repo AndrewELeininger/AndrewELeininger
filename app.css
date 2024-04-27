@@ -39,7 +39,7 @@ html {
 }
 ::-webkit-scrollbar {
    width: 15px;
-   height: 10; 
+   height: 0; 
 }
 ::-webkit-scrollbar-thumb {
     margin: 1rem 0;
@@ -348,7 +348,7 @@ margin: 15px;  */
     border-radius: 50%;
     transition: all ease .5s;
 }
-.background { 
+.folioContainer { 
     position: relative;
     background-color: var(--fg);
     display: grid;
@@ -371,11 +371,42 @@ margin: 15px;  */
     grid-auto-columns: 25vw;
     border-radius: .5rem;
     overflow-x: scroll;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     opacity: 50%;  
     scale: 80%;  
     transition: all ease .5s;
 }
+.left-arrow::before,
+.right-arrow::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.left-arrow::before {
+    border-width: 15px 20px 15px 0;
+    border-color: transparent var(--bg) transparent transparent;
+    left: 5vw;
+}
+.right-arrow::after {
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent var(--bg);
+    right: 5vw;
+}
+.arrow {
+    opacity: 50%;
+    transition: all ease .25s;
+}
+.arrow:hover {
+    opacity: 100%;
+}
+
 .folio:hover {
     opacity: 100%;
 }
