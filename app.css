@@ -577,6 +577,9 @@ margin: 15px;  */
         opacity: 100%;
         scale: 100%;
     }
+    .arrow {
+        display: none;
+    }
 
     .viewer {
         width: 100%;
