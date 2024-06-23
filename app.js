@@ -36,14 +36,17 @@ function popDown() {
 };
 
 /*HOME*/
-function photography() {
-  document.getElementById('phoGal').scrollIntoView();
-}
 function filmmaking() {
     window.location.href="film.html";
 }
+function photography() {
+  document.getElementById('phoGal').scrollIntoView();
+}
 function animation() {
   document.getElementById('renders').scrollIntoView();
+}
+function artists() {
+  document.getElementById('artists').scrollIntoView();
 }
 
 /*PHOTOGRAPHY*/
@@ -83,11 +86,9 @@ function otherbtn() {
 
 /*RENDERS*/
 const scrollFolio = document.querySelector(".folio");
-
 function left() {
     scrollFolio.scrollLeft -= 500; 
 };
-
 function right() {
     scrollFolio.scrollLeft += 500;
 };

@@ -1,9 +1,10 @@
 /*PARALLAX*/
-/*.parallax {
+.parallax {
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 .parallax_layer {
     position: absolute;
@@ -18,17 +19,16 @@
     transform-style: preserve-3d;
 }
 .back {
-    transform: translateZ(-2px) scale(3) translate( -5px, 0);
-}
-.mid {
     transform: translateZ(-1px) scale(2) translate(-4px, 0);
 }
 .front {
     transform: translateZ(0px);
-}*/
+    margin-top: 51rem;
+}
+
 /*GENERAL*/
 html {
-    scroll-behavior: smooth;
+    
 }
 :root {
     --f1: clamp(3rem, 4vw + 1rem, 4rem);
@@ -81,17 +81,6 @@ body{
 p {
     font-size: var(--f2);
 }
-.fancy-p {
-    font-size: var(--f2);
-    color: var(--bg);
-    background-color: var(--fg);
-        border: 30px solid;
-        border-image-source: url("border.png");
-        border-image-outset: 10px;
-        border-image-slice: 60;
-        border-image-repeat: round;  
-    margin: 7.5rem 15rem;   
-}
 .hiddenB {
     opacity: 0;
     scale: 95%;
@@ -127,45 +116,55 @@ p {
     object-fit: contain;
 }
 
-/*border: 30px solid;
-border-image-source: url("border2.png");
-border-image-slice: 60;
-border-image-repeat: round;  
-margin: 15px;  */
+/*  border: 30px solid;
+    border-image-source: url("border.png");
+    border-image-outset: 10px;
+    border-image-slice: 60;
+    border-image-repeat: round;*/
 
-/*HOME*/
+/*LOGO*/
 @keyframes roll {
 0% {background-image: url("img3d.jpg")}
 33%{background-image: url("imgfilm.jpg")}
 66%{background-image: url("imgphoto.jpg")}
 100%{background-image: url("img3d.jpg")}
 }   
-.homemenu{
+.logo {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 30rem;
-    background-color: var(--fg); 
-    padding: 1rem 0; 
+    grid-template-rows: repeat(auto-fit, minmax(30rem, 50rem));
 }
-.menubg{  
+.logobg{  
     background-image: url("img3d.jpg");
     background-size: 75%;
     background-position: center;
     background-color: var(--fg);
     filter: blur(2px);
     scale: 165%;
-    margin-bottom: 0px;
-    grid-area: 1/1/2/4;
+    grid-area: 1/1/2/2;
     animation: roll infinite 10s normal;
 }
-.logo{  
+.logofg{  
     background-image: url("Logo.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 0px;
-    grid-area: 1/1/2/4;
+    grid-area:1/1/2/2;
+    margin: 10rem 0;
     z-index: 1;
+}
+/*HOME*/
+.block {
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    background-color: var(--bg);
+    border-top: solid var(--fg) 3px;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
+    z-index: -1;
+}
+.homemenu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 .menubtn{
     font-family:serif;
@@ -194,17 +193,17 @@ margin: 15px;  */
     font-size: var(--f1);    
     text-align: center;
     text-transform: uppercase;
-    margin: 10% 0 0 0;
+    margin: 1rem 0 0 0;
 }
 .divide {
     height: clamp(2rem, 2.5vw + 1rem, 3rem);  
     width: 100%;
-    transform: rotate(180deg);
+    transform: rotate(180deg);    
     background-image: url("divide.svg");
     background-position: center;     
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 1rem 0;
+    margin:  1rem 0;
 }
 .photoarea {
     display: grid;
@@ -417,6 +416,26 @@ margin: 15px;  */
     border-radius: .5rem;
     scale: 93%;
 }
+/*ARTISTS*/
+#artists {
+    color: var(--fg);
+    font-size: var(--f1);    
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10rem 1rem;
+    background-color: var(--bg); 
+}
+.headshot {
+    width: 150px;
+    height: 150px;
+        border-radius: 50%;
+        border: 3px var(--fg) solid;
+    object-fit: cover;
+    margin: 0 50% 20px 50%;
+    transform: translate(-50%, 0);
+}
+
 /*FILM*/
 #movieTheater {
     color: var(--bg);
@@ -530,23 +549,17 @@ margin: 15px;  */
 /*HIDDEN*/
 
 @media screen and (max-width: 1000px) {
-    .fancy-p {
-        margin: 2.5rem 25px;
-    }
     
-    .homemenu{
-        background-color: var(--bg);
-        grid-template-columns: repeat(1, 1fr);
+    .logobg {
+
     }
-    .menubg {
-        background-size: cover;
-        scale: 105%;
-        margin-bottom: 15px;        
-        grid-area: 1/1/2/2;  
+    .logofg{
+
     }
-    .logo{
-        margin-bottom: 15px;        
-        grid-area: 1/1/2/2;
+
+    .homemenu {
+        grid-template-columns: 1fr;
+        margin:
     }
     .menubtn{
         margin: 25px;
